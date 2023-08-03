@@ -1,6 +1,4 @@
 from mcpi import minecraft,block
-import time
-import random
 import math
 mc = minecraft.Minecraft.create("144.24.195.176")
 
