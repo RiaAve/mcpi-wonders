@@ -1,27 +1,11 @@
-from mcpi import minecraft, block
-import math
-mc = minecraft.Minecraft.create("144.24.195.176")
+from mcpi import block
+import sys
 
-def getStartPoint(distance):
-    direction = mc.player.getDirection()
+sys.path.insert(0, '')
 
-    playerTile = mc.player.getTilePos()
-
-    yProjection = math.sqrt(1 - direction.y ** 2)
+from utils.startPoint import *
     
-    zProjection = direction.z / yProjection
-    xProjection = direction.x / yProjection
-    
-    x = playerTile.x + xProjection * distance
-    z = playerTile.z + zProjection * distance
-    
-    return {
-        "x": x,
-        "z": z,
-        "y": playerTile.y
-        }
-    
-sp = getStartPoint(5)
+sp = getStartPoint()
 
 for n in range(10):
     length = 10 - n

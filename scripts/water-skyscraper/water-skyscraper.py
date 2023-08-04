@@ -1,24 +1,9 @@
-from mcpi import minecraft,block
-import time
-import random
-mc = minecraft.Minecraft.create("144.24.195.176")
+from mcpi import block
+import sys
 
-def getStartPoint():
-    direction = mc.player.getDirection()
+sys.path.insert(0, '')
 
-    playerTile = mc.player.getTilePos()
-
-    dx = direction.x * 5 * (abs(direction.y) + 1)
-    dz = direction.z * 5 * (abs(direction.y) + 1)
-
-    startpointx = playerTile.x + dx 
-    startpointz = playerTile.z + dz
-
-    return {
-        "x": startpointx,
-        "z": startpointz,
-        "y": playerTile.y
-        }
+from utils.startPoint import *
 
 sp = getStartPoint()
 ep = {
