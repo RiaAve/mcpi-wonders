@@ -8,12 +8,13 @@ from utils.startPoint import *
 
 sp = getStartPoint()
 
-vangle = 70
+vangle = 20
 hangle = 45
 for _ in range(20):
     dy = math.sin(math.radians(vangle))
-    dx = math.cos(math.radians(vangle)) 
-    dz = math.cos(math.radians(hangle)) 
+    hyp2 = math.cos(math.radians(vangle)) 
+    dx = math.sin(math.radians(hangle)) * hyp2
+    dz = math.cos(math.radians(hangle)) * hyp2
     sp['x'] += dx 
     sp['z'] += dz 
     sp['y'] += dy
