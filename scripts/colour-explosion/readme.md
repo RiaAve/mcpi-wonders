@@ -1,1 +1,1 @@
-![img](./colour-explosion/colour_explosion.png)
+![img](./colour_explosion.png)
