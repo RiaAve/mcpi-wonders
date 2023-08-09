@@ -5,7 +5,8 @@ sys.path.insert(0, '')
 
 from utils.startPoint import *
 
-def leaning_line(vangle, hangle, material, sp):
+def leaning_line(vangle, hangle, material, original_sp):
+    sp = original_sp.copy()
     for _ in range(random.randint(15, 25)):
         dy = math.sin(math.radians(vangle))
         hyp2 = math.cos(math.radians(vangle)) 
