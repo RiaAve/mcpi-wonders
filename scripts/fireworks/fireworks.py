@@ -17,11 +17,18 @@ def leaning_arc(vangle, hangle, material, original_sp):
         sp['x'] += dx 
         sp['z'] += dz
         sp['y'] += dy
-        mc.setBlock(sp['x'], sp['y'], sp['z'], material)
-        vangle -= 100 / numberOfBlocks
+        if vangle >= 90 and vangle <= 265:
+            mc.setBlock(sp['x'], sp['y'], sp['z'], material)
+            vangle += 100 / numberOfBlocks
+        elif vangle <= 90 or vangle >= 275:
+            mc.setBlock(sp['x'], sp['y'], sp['z'], material)
+            vangle -= 100 / numberOfBlocks
+            
+sp = getStartPoint() 
 
-sp = getStartPoint()
-material = block.GLASS.id 
-
-leaning_arc(60, 50, material, sp)
+for _ in range(100):
+    vangle = random.randint(1, 359)
+    hangle = random.randint(1, 359)
+    material = block.WOOL.id, random.randint(0,15)
+    leaning_arc(vangle, hangle, material, sp)
 
