@@ -1,1 +1,1 @@
-![img](./helix.png)
+![img](./double_helix.png)
