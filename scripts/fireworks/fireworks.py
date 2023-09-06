@@ -1,6 +1,5 @@
 from mcpi import block
 import random
-import math
 import sys
 sys.path.insert(0, '')
 
