@@ -7,7 +7,7 @@ sp = getStartPoint()
 
 def sphere(radius):
 
-    for hangle in range(360):
+    for hangle in range(180):
         for vangle in range(360):
             x = math.cos(math.radians(vangle)) 
             y = math.sin(math.radians(vangle)) 
