@@ -1,6 +1,6 @@
-import glob
+from glob import glob
 
-images = glob.glob('scripts/**/*.png')
+images = glob('scripts/**/*.png') + glob('scripts/**/*.jpeg') + glob('scripts/**/*.mp4') 
 
 md_images = []
 for path in images:
