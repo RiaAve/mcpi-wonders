@@ -23,4 +23,3 @@ Clone the repo and open in vscode (or some IDE that has a concept of project dir
 ![img](./scripts/colour-explosion/colour_explosion.png)
 ![img](./scripts/antlers/antlers.png)
 ![img](./scripts/ice-cream/Ice-cream.jpeg)
-![img](./scripts/live_fireworks/live_fireworks.mp4)
